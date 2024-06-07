@@ -39,7 +39,7 @@ const App: React.FC = () => {
       useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get<ResponseData>('/sample-data.json');
+                const response = await axios.get<ResponseData>('../public/sample-data.json');
     
                 console.log(response)
     
