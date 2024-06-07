@@ -48,7 +48,7 @@ const App: React.FC = () => {
                 //console.log('Response data:', response.data.data);
                 // console.log('AuthorWorklog:', response.data.data.AuthorWorklog);
                 // console.log('Rows:', response.data.data.AuthorWorklog.rows);
-                setData(response.data.data.AuthorWorklog.rows ?? []);
+                setData(authorWorklog.rows);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
