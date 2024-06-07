@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ComposedChart } from 'recharts';
-import { AuthorWorklogRow } from '../types';
+import { RowsEntity } from '../types';
 import CustomDropdown from '../CustomDropdown';
 
 interface Props {
-  data: AuthorWorklogRow;
+  data: RowsEntity;
 }
 
 const ChartContainer = styled.div`
