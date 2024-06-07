@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AuthorWorklogRow } from '../types';
+import { RowsEntity, DayWiseActivityEntity } from '../types';
 
 interface Props {
-  data: AuthorWorklogRow;
+  data: RowsEntity;
 }
 
 // Define styled components
@@ -58,7 +58,7 @@ const ActivityTable: React.FC<Props> = ({ data }) => (
         </tr>
       </StyledThead>
       <StyledTbody>
-        {data.dayWiseActivity.map(day => (
+        {data.dayWiseActivity.map((day: DayWiseActivityEntity) => (
           <StyledTr key={day.date}>
             <StyledTd isHighlighted={false}>{day.date}</StyledTd>
             {day.items.children.map(item => (

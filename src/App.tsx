@@ -36,26 +36,25 @@ const App: React.FC = () => {
         data: AppData;
       }
 
-    useEffect(() => {
+      useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get<ResponseData>('/sample-data.json');
-
+    
                 console.log(response)
-
+    
                 const authorWorklog = response.data.data.AuthorWorklog;
-                 console.log('Response:', authorWorklog);
-                //console.log('Response data:', response.data.data);
-                // console.log('AuthorWorklog:', response.data.data.AuthorWorklog);
-                // console.log('Rows:', response.data.data.AuthorWorklog.rows);
-                setData(authorWorklog.rows);
+                console.log('Response:', authorWorklog);
+                
+                setData(authorWorklog.rows); // Update this line to match the structure of your data
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
-
+    
         fetchData();
     }, []);
+    
  
     
     // useEffect(() => {
